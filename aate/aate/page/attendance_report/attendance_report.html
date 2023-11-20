@@ -1,0 +1,30 @@
+<table class="table table-bordered" style="border: 2px solid black;">
+    <thead>
+        <tr>
+            <th>Employee ID</th>
+            <th>Employee Name</th>
+            <th>Date</th>
+            <th>Check-in Time</th>
+            <th>Check-out Time</th>
+            <th>Total Time</th>
+            <th>Status</th>
+        </tr>
+    </thead>
+    <tbody>
+        {% for row in data %}
+        <tr>
+            <td>{{ row["Employee ID"] }}</td>
+            <td>{{ row["Employee Name"] }}</td>
+            <td>{{ row["Date"] }}</td>
+            <td>{{ row["Check In Time"] }}</td>
+            <td>{{ row["Check Out Time"] }}</td>
+            <td>{{ row["Total Time"] }}</td>
+            {% if row["Status"] == "Present" %}
+            <td style="color: green">{{ row["Status"] }}</td>
+            {% else %}
+            <td style="color: red">{{ row["Status"] }}</td>
+            {% endif %}
+        </tr>
+        {% endfor %}
+    </tbody>
+</table>
