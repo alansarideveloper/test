@@ -7,7 +7,7 @@ with open("requirements.txt") as f:
 from aate import __version__ as version
 
 setup(
-	name="aate",
+	name="test",
 	version=version,
 	description="Al Ansari Trading Enterprise",
 	author="Mustafa Ahmad",
